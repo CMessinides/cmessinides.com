@@ -6,12 +6,15 @@ html(lang="en")
 		meta(http-equiv="X-UA-Compatible", content="ie=edge")
 		title
 			block pageTitle
-				| Cameron Messinides + NPR Visuals
+				| Cameron Messinides
 		block styles
+			link(rel="stylesheet", href="/style.css")
+			link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Mono|Libre+Franklin:400,400i,700,700i&display=swap")
 		block scriptsHead
-	body
+	body.l-main
 		block header
 			include ./header
-		block content
-		block footer
+		.l-main__body
+			block content
+			block footer
 		block scriptsBody

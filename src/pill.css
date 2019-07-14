@@ -1,0 +1,38 @@
+.c-pill {
+	line-height: 1;
+}
+
+.c-pill__container {
+	display: inline-block;
+	padding: var(--spacing--sm--px) var(--spacing--md--px);
+	position: relative;
+}
+
+.c-pill__checkbox {
+	appearance: none;
+	display: block;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	margin: 0;
+	width: 100%;
+	border-radius: 99999px;
+	border: 1px currentColor solid;
+	z-index: 1;
+}
+
+.c-pill__checkbox:checked {
+	background-color: var(--color--accent-400);
+	border: none;
+}
+
+.c-pill__label {
+	position: relative;
+	z-index: 2;
+}
+
+.c-pill__checkbox:checked + .c-pill__label {
+	color: #ffffff;
+}

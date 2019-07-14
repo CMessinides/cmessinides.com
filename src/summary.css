@@ -1,0 +1,62 @@
+.c-summary,
+.c-summary__link {
+	/*
+		For both the summary and its inner link, fill the enitre height
+		of its container to allow for vertically aligning the contents
+		of neighboring summaries.
+	*/
+	height: 100%;
+}
+
+.c-summary__link {
+	display: flex;
+	flex-direction: column;
+	background-color: #ffffff;
+	padding: var(--spacing--md--px);
+	border-top: 4px var(--color--main-900) solid;
+}
+
+.c-summary__header {
+	margin-bottom: var(--spacing--md--rem);
+}
+
+.c-summary__heading,
+.c-summary__description {
+	display: inline;
+}
+
+.c-summary__heading {
+	font-weight: 700;
+
+	&::after {
+		content: ' ';
+	}
+}
+
+.c-summary__description,
+.c-summary__details {
+	color: var(--color--grey-500);
+}
+
+.c-summary__description {
+	font-style: italic;
+}
+
+.c-summary__thumbnail {
+	display: block;
+	max-width: 100%;
+	margin-top: auto;
+}
+
+.c-summary__details {
+	display: flex;
+	font-family: var(--font--mono);
+	font-size: var(--font-size--xs);
+	text-transform: uppercase;
+	letter-spacing: var(--tracking--wide);
+	margin-top: var(--spacing--md--rem);
+}
+
+.c-summary__detail ~ .c-summary__detail {
+	margin-left: auto;
+}

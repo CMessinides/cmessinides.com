@@ -1,8 +1,24 @@
-@import "../lib/base.css";
+/* Setup and base styling */
+@import "./reset.css";
+@import "./variables.css";
+@import "./base.css";
 
-/* Custom styles here */
-h1 {
-	color: green;
-}
+/* Layout classes */
+@import "./main.css";
 
-@import "../lib/utilities.css";
+/* Object classes */
+@import "./heading.css";
+@import "./container.css";
+
+/* Component classes */
+@import "./link.css";
+@import "./input.css";
+@import "./pill.css";
+@import "./header.css";
+@import "./summary.css";
+@import "./project-gallery.css";
+@import "./home-hero.css";
+@import "./home-projects.css";
+
+/* Utilities */
+@import "./sr-only.css";

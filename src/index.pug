@@ -1,11 +1,34 @@
-extends ../lib/base
+extends ./base
 
-block styles
-	link(rel="stylesheet", href="style.css")
+include ./project-summary
 
 block content
-	h1 Hello world!
-	a(href="work/kenyon-collegian-web/index.pug") Kenyon Collegian website
+	main.l-homepage
+		article
+			header.c-home-hero
+				.o-container.c-home-hero__container
+					.c-home-hero__intro
+						h1.o-heading--1.c-home-hero__heading Hey there, I&rsquo;m Cameron. 
+						p.c-home-hero__blurb
+							| I&rsquo;m a writer, designer, and web developer.
+							| I&rsquo;m passionate about journalism and interested in
+							| telling stories through words, visuals, data, and&nbsp;code.
+			section.c-home-projects
+				.o-container.o-container--flush.c-home-projects__container
+					.c-home-projects__sidebar
+						h2.c-home-projects__heading.o-heading--2 Projects
+						a.c-link.c-link--skip.u-sr-only.c-home-projects__skip-link(href="#home-projects-project-list") Skip to projects
+						form.c-home-projects__search-form(action="/#home-projects-project-list" role="search" aria-label="Search projects" aria-controls="home-projects-project-list")
+							label.u-sr-only(for="home-projects-filter-form-search-input") Project title
+							input.c-input.c-input--text.c-input--glass(id="home-projects-filter-form-search-input" name="s" placeholder="Search" role="search" type="text" disabled)
+							button.u-sr-only.c-button(type="submit" disabled) Search projects
+					ul#home-projects-project-list.c-home-projects__list
+						each project in projects
+							li.c-home-projects__item
+								+projectSummary(project)
+					
+
+
 
 block scriptsBody
 	script(src="./index.ts")

@@ -1,0 +1,18 @@
+.c-link {
+	color: var(--color--accent-400);
+	padding-bottom: 1px;
+	border-bottom: 2px var(--color--accent-200) solid;
+}
+
+.c-link:hover,
+.c-link:focus,
+.c-link:active {
+	border-color: var(--color--accent-400);
+}
+
+.c-link--skip {
+	display: inline-block;
+	padding: var(--spacing--sm--px) var(--spacing--md--px);
+	line-height: 1;
+	background-color: #ffffff;
+}

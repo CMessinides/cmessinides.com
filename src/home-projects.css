@@ -1,0 +1,115 @@
+.c-home-projects {
+	overflow: hidden;
+	background-color: var(--color--main-100);
+	color: var(--color--main-900);
+}
+
+.c-home-projects__container {
+	@media (min-width: 48em) {
+		display: flex;
+	}
+}
+
+.c-home-projects__sidebar,
+.c-home-projects__list {
+	padding: var(--spacing--md--px);
+}
+
+
+.c-home-projects__sidebar {
+	position: relative;
+	background-color: var(--color--main-200);
+
+	@media (min-width: 48em) {
+		flex: 0 0 15rem;
+	}
+}
+
+.c-home-projects__skip-link {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.c-home-projects__search-form {
+	margin-top: var(--spacing--md--rem);
+	position: relative;
+	z-index: 2;
+}
+
+@media (min-width: 26em) and (max-width: 47.9735em) {
+	.c-home-projects__sidebar {
+		display: flex;
+		align-items: center;
+	}
+
+	.c-home-projects__search-form {
+		flex: 1 1 auto;
+		max-width: 18rem;
+		margin-top: 0;
+		margin-left: auto;
+		padding-left: var(--spacing--md--px);
+	}
+}
+
+.c-home-projects__sidebar::before {
+	content: '';
+	position: absolute;
+	width: 100vw;
+	display: block;
+	top: 0;
+	bottom: 0;
+	background-color: var(--color--main-200);
+	transform: translateX(-100%);
+}
+
+.c-home-projects__list {
+	@media (min-width: 30em) {
+		display: flex;
+		flex-wrap: wrap;
+	}
+}
+
+.c-home-projects__item {
+	@media (min-width: 30em) {
+		flex: 0 1 auto;
+		width: calc(50% - var(--spacing--md--px) / 2);
+	}
+
+	@media (min-width: 60em) {
+		width: calc(33.333% - var(--spacing--md--px) * 2 / 3);
+	}
+}
+
+.c-home-projects__item:not(:first-child) {
+	margin-top: var(--spacing--md--px);
+}
+
+.c-home-projects__item:nth-child(2) {
+	@media (min-width: 30em) {
+		margin-top: 0;
+	}
+}
+
+.c-home-projects__item:nth-child(3) {
+	@media (min-width: 60em) {
+		margin-top: 0;
+	}
+}
+
+.c-home-projects__item:nth-child(2n + 2) {
+	@media (min-width: 30em) {
+		margin-left: var(--spacing--md--px);
+	}
+
+	@media (min-width: 60em) {
+		margin-left: 0;
+	}
+}
+
+.c-home-projects__item:nth-child(3n + 2),
+.c-home-projects__item:nth-child(3n + 3) {
+	@media (min-width: 60em) {
+		margin-left: var(--spacing--md--px);
+	}
+}

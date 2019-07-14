@@ -1,0 +1,12 @@
+.o-heading {
+	font-weight: 700;
+}
+
+.o-heading--1 {
+	font-size: var(--font-size--3xl);
+	line-height: var(--leading--tight);
+}
+
+.o-heading--2 {
+	font-size: var(--font-size--2xl);
+}

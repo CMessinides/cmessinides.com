@@ -1,0 +1,12 @@
+include ./heading
+include ./project-summary
+
+mixin projectGallery({ heading, projects, headingLevel = 2 } = {})
+	section.c-project-gallery&attributes(attributes)
+		.o-container.c-project-gallery__container
+			header.c-project-gallery__header
+				+heading(headingLevel).c-project-gallery__heading= heading
+			ul.c-project-gallery__list
+				each project in projects
+					li.c-project-gallery__item
+						+projectSummary(project)

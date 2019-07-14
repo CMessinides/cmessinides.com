@@ -1,11 +1,11 @@
 {
-  "name": "npr.cmessinides.com",
+  "name": "cmessinides.com",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start": "parcel serve src/index.pug",
-    "build": "parcel build src/index.pug"
+    "start": "parcel serve 'src/**/index.pug'",
+    "build": "parcel build 'src/**/index.pug'"
   },
   "devDependencies": {
     "autoprefixer": "^9.6.1",

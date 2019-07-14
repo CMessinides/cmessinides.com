@@ -1,0 +1,50 @@
+html,
+body {
+	height: 100%;
+}
+
+html {
+	font-size: 100%;
+}
+
+body {
+	background-color: #ffffff;
+	color: var(--color--grey-900);
+	font-family: var(--font--sans);
+	font-size: var(--font-size--md);
+	line-height: var(--leading--normal);
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+button {
+	appearance: none;
+	border: none;
+	background: none;
+	font-family: inherit;
+	font-size: inherit;
+	line-height: inherit;
+	color: inherit;
+	padding: 0;
+	text-align: inherit;
+}
+
+b,
+strong,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: 700;
+}
+
+i,
+em,
+cite.title {
+	font-style: italic;
+}

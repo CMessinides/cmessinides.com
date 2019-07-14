@@ -1,0 +1,28 @@
+.c-input {
+	appearance: none;
+	color: inherit;
+	font: inherit;
+}
+
+.c-input--text {
+	background-color: var(--color--grey-200);
+	border: none;
+	padding: var(--spacing--sm--px);
+	display: block;
+	width: 100%;
+	border-radius: var(--radius--md);
+	line-height: 1;
+}
+
+.c-input--text:focus {
+	outline: 5px transparent solid;
+	box-shadow: 0 0 0 3px var(--color--accent-400);
+}
+
+.c-input--glass {
+	background-color: hsla(0, 0%, 100%, 0.5);
+}
+
+.c-input--glass:focus {
+	background-color: #ffffff;
+}
