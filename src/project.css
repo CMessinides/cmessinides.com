@@ -1,0 +1,40 @@
+.c-project__title {
+	font-size: var(--font-size--2xl);
+	line-height: var(--leading--tight);
+}
+
+.c-project__description,
+.c-project__details {
+	color: var(--color--grey-500);
+}
+
+.c-project__description {
+	font-style: italic;
+	font-size: var(--font-size--lg);
+}
+
+.c-project__thumbnail {
+	display: block;
+	max-width: 100%;
+}
+
+.c-project__details {
+	font-size: var(--font-size--xs);
+	font-family: var(--font--mono);
+}
+
+.c-project__detail-group {
+	padding-top: var(--spacing--xs--rem);
+	margin-top: var(--spacing--sm--rem);
+	border-top: 1px var(--color--grey-300) solid;
+}
+
+.c-project__detail-label {
+	font-weight: 700;
+	letter-spacing: var(--tracking--wide);
+	text-transform: uppercase;
+}
+
+.c-project__detail {
+	margin-top: var(--spacing--xs--rem);
+}

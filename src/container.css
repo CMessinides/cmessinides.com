@@ -6,6 +6,10 @@
 	padding-right: var(--spacing--md--px);
 }
 
+.o-container--narrow {
+	max-width: 36rem;
+}
+
 .o-container--flush {
 	padding-left: 0;
 	padding-right: 0;

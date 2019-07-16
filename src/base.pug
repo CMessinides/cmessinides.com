@@ -1,12 +1,15 @@
+include ./html-head
+
 <!DOCTYPE html>
 html(lang="en")
 	head
 		meta(charset="UTF-8")
 		meta(name="viewport", content="width=device-width, initial-scale=1")
 		meta(http-equiv="X-UA-Compatible", content="ie=edge")
-		title
-			block pageTitle
-				| Cameron Messinides
+		block pageTitle
+			+pageTitle
+		block pageDescription
+			+pageDescription
 		block styles
 			link(rel="stylesheet", href="/style.css")
 			link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Mono|Libre+Franklin:400,400i,700,700i&display=swap")
@@ -19,3 +22,4 @@ html(lang="en")
 			block footer
 				include ./footer
 		block scriptsBody
+			script(src="/index.ts")

@@ -1,18 +1,20 @@
 const fs = require("fs");
 
-const projects = JSON.parse(
-	fs.readFileSync("./src/data/projects.json").toString()
-);
+const locals = {};
+const dataFiles = ["site", "projects"];
 
-projects.byCategory = projects.reduce((categoryMap, project) => {
-	const { category } = project;
-	if (!categoryMap[category]) categoryMap[category] = [];
-	categoryMap[category].push(project);
-	return categoryMap;
-}, {});
+for (let i = 0; i < dataFiles.length; i++) {
+	const key = dataFiles[i];
+	locals[key] = JSON.parse(
+		fs.readFileSync(`./src/data/${key}.json`).toString()
+	);
+}
 
-module.exports = {
-	locals: {
-		projects
-	}
+locals.projects.findByHref = function(pattern) {
+	return this.find(project => {
+		const matches = project.href.match(pattern);
+		return Boolean(matches[0]);
+	});
 };
+
+module.exports = { locals };

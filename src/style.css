@@ -3,9 +3,6 @@
 @import "./variables.css";
 @import "./base.css";
 
-/* Layout classes */
-@import "./main.css";
-
 /* Object classes */
 @import "./heading.css";
 @import "./container.css";
@@ -15,6 +12,7 @@
 @import "./link.css";
 @import "./input.css";
 @import "./pill.css";
+@import "./project.css";
 @import "./header.css";
 @import "./footer.css";
 @import "./contact-prompt.css";
@@ -22,6 +20,10 @@
 @import "./project-gallery.css";
 @import "./home-hero.css";
 @import "./home-projects.css";
+
+/* Layout classes */
+@import "./main.css";
+@import "./case-study.css";
 
 /* Utilities */
 @import "./sr-only.css";
