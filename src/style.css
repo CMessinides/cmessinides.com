@@ -6,6 +6,7 @@
 /* Object classes */
 @import "./heading.css";
 @import "./container.css";
+@import "./aspect-ratio.css";
 
 /* Component classes */
 @import "./button.css";
@@ -17,6 +18,7 @@
 @import "./footer.css";
 @import "./contact-prompt.css";
 @import "./summary.css";
+@import "./article.css";
 @import "./project-gallery.css";
 @import "./home-hero.css";
 @import "./home-projects.css";

@@ -2,12 +2,13 @@
 	font-weight: 700;
 }
 
-.o-heading--1 {
+.o-heading--1,
+.o-contains-headings h1 {
 	font-size: var(--font-size--3xl);
 	line-height: var(--leading--tight);
 }
 
-.o-heading--2 {
-	font-size: var(--font-size--2xl);
-	line-height: var(--leading--tight);
+.o-heading--2,
+.o-contains-headings h2 {
+	font-size: var(--font-size--xl);
 }

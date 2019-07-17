@@ -5,6 +5,8 @@
 .c-contact-prompt__heading {
 	display: flex;
 	align-items: center;
+	font-size: var(--font-size--2xl);
+	line-height: var(--leading--tight);
 }
 
 .c-contact-prompt__indicator,
@@ -52,8 +54,12 @@
 .c-contact-prompt__blurb,
 .c-contact-prompt__details,
 .c-contact-prompt__cta {
-	opacity: 0.75;
 	margin-top: var(--spacing--md--rem);
+}
+
+.c-contact-prompt__blurb,
+.c-contact-prompt__details {
+	color: var(--color--grey-300);
 }
 
 .c-contact-prompt__blurb {

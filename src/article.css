@@ -1,0 +1,54 @@
+.c-article {
+	/*
+		We break from BEM conventions within this context for ease of development.
+		The fewer the class names and the shorter those class names are, the quicker
+		we can draw up case study pages with common sense styles already in place.
+	*/
+
+	/* Used to number figures */
+	counter-reset: figures;
+
+	/* Create large breaks before headings and figures. */
+	& h2:not(:first-child),
+	& figure:not(:first-child) {
+		margin-top: var(--spacing--lg--rem);
+	}
+
+	/*
+		Keep paragraphs and captions to a readable line length and create small
+		breaks before them.
+	*/
+	& p,
+	& figcaption {
+		max-width: 36em;
+		margin-top: var(--spacing--sm--rem);
+	}
+
+	/* Create large breaks after figures as well. */
+	& figure {
+		counter-increment: figures;
+		margin-bottom: var(--spacing--lg--rem);
+
+		/*
+			Don't create an additional small break between figures and paragraphs,
+			since CSS Grid eliminates margin collapsing.
+		*/
+		& + p {
+			margin-top: 0;
+		}
+
+		& img {
+			display: block;
+		}
+	}
+
+	& figcaption {
+		font-size: var(--font-size--sm);
+		font-family: var(--font--mono);
+		color: var(--color--grey-500);
+
+		&::before {
+			content: "Fig. " counter(figures) ". ";
+		}
+	}
+}

@@ -28,11 +28,15 @@
 
 @supports (display: grid) {
 	@media (min-width: 52em) {
-		.l-case-study__header {
+		.l-case-study__header,
+		.l-case-study__body {
 			display: grid;
-			grid-template-columns: 1fr 4fr;
-			grid-gap: var(--spacing--lg--px);
 			max-width: 100%;
+		}
+		
+		.l-case-study__header {
+			grid-gap: var(--spacing--lg--px);
+			grid-template-columns: 1fr 4fr;
 		}
 
 		.l-case-study__description,
@@ -54,6 +58,23 @@
 		.l-case-study__details {
 			display: block;
 			align-self: end;
+		}
+
+		.l-case-study__body {
+			grid-column-gap: var(--spacing--lg--px);
+			grid-template-columns: 20% 1fr 20%;
+
+			& > * {
+				grid-column: 2;
+			}
+
+			& > .wide {
+				grid-column: 1 / span 2;
+			}
+
+			& > .double-wide {
+				grid-column: 1 / span 3
+			}
 		}
 	}
 

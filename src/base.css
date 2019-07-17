@@ -48,3 +48,8 @@ em,
 cite.title {
 	font-style: italic;
 }
+
+img,
+iframe {
+	max-width: 100%;
+}

@@ -2,6 +2,7 @@ extends ../base
 
 include ../html-head
 include ../case-study
+include ../aspect-ratio
 
 block pageTitle
 	+pageTitle(projects.findByHref("kenyon-collegian-web").title)
@@ -10,4 +11,41 @@ block pageDescription
 	+pageDescription(projects.findByHref("kenyon-collegian-web").description)
 
 block content
-		+caseStudy(projects.findByHref("kenyon-collegian-web"))
+	+caseStudy(projects.findByHref("kenyon-collegian-web"))
+		h2#heading-summary Summary
+		p
+			| To replace an outdated and buggy site for the #[cite.title Kenyon Collegian],
+			| I designed and built a new website with improved accessibility, performance,
+			| and user experience. The result is a professional and polished product that
+			| better communicates the #[cite.title Collegian]'s commitment to accuracy,
+			| clarity, and excellence.
+		h2#heading-problem Understanding the Problem
+		p
+			| In 2017, the #[cite.title Collegian] needed a new website. At the time,
+			| the existing website looked outdated, was hard to navigate, and had the potential
+			| to undermine the #[cite.title Collegian]’s reputation as a trustworthy
+			| newspaper&mdash;the site even appeared in Google search results as potential malware.
+		figure#figure-old-site
+			img(src="./kenyon-collegian-web/old-site.png", alt="List of news articles on a web page. Screenshot.")
+			figcaption The homepage of the previous website.
+		p
+			| I worked with the #[cite.title Collegian]’s executive staff&mdash;Bailey Blaker,
+			| Lauren Eller, and Gabrielle Healy&mdash;over the summer and fall to design and
+			| develop a revamped website that would work better for both Collegian staffers and readers.
+		p
+			| Because the project timeline spanned the summer and fall, the #[cite.title Collegian] staff
+			| and I worked remotely for most of the process (I was off-campus in the fall semester). As a
+			| result, good communication was crucial, and I made sure to clearly relay my reasoning, decisions,
+			| and progress. I began the process with a
+			|
+			a.c-link(href="https://paper.dropbox.com/doc/Site-Usability-Analysis--AdNUY_gPjSPhm6RncffF12U~AQ-yKmTaYpoVMgRe94sazrAi" target="_blank" rel="noopener noreferrer") usability analysis
+			|
+			| of the previous website, outlining the problem areas in need of a redesign.
+		p
+			| Next, I drew up #[a.c-link(href="https://www.figma.com/file/QNpMaWZf4fsbIicF4mocvxlp/Wireframes?node-id=0%3A1" target="_blank" rel="noopener noreferrer") wireframes] of critical pages and
+			| addressed how they would solve some of those problems. After the #[cite.title Collegian] editors approved the plan, I set about designing and developing the new website.
+		figure#figure-wireframes.wide
+			+aspectRatio
+				iframe(style="border: none;" width="800" height="450" title="Kenyon Collegian website wireframes" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FQNpMaWZf4fsbIicF4mocvxlp%2FWireframes%3Fnode-id%3D0%253A1" allow="fullscreen" priority="low" referrerpolicy="noreferrer")
+			figcaption Initial wireframes for the homepage, category page, and search page
+
