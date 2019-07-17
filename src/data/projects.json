@@ -6,7 +6,7 @@
 		"thumbnailSrc": "https://www.cmessinides.com/static/c94426bf8ac18df8c9a9d67e1decd2e4/3beb5/kenyon-collegian-web.png",
 		"category": "Web",
 		"date": "Fall 2017",
-		"role": "Product design, front-end development, dev-ops"
+		"role": "UI/UX design, front-end development, dev-ops"
 	},
 	{
 		"title": "The Collegian Magazine Website",
@@ -14,7 +14,8 @@
 		"href": "/work/collegian-magazine-web/",
 		"thumbnailSrc": "https://www.cmessinides.com/static/f246f60761616e9f9facc8d31ddc5f70/3beb5/collegian-magazine-web.png",
 		"category": "Web",
-		"date": "Summer 2017"
+		"date": "Summer 2017",
+		"role": "UI/UX design, CMS design, front-end development"
 	},
 	{
 		"title": "The Kenyon Collegian Tipline",
@@ -22,7 +23,8 @@
 		"href": "/work/kenyon-collegian-tipline/",
 		"thumbnailSrc": "https://www.cmessinides.com/static/c94426bf8ac18df8c9a9d67e1decd2e4/3beb5/kenyon-collegian-web.png",
 		"category": "Web",
-		"date": "Winter 2018"
+		"date": "Winter 2018",
+		"role": "UI/UX design, front-end development"
 	},
 	{
 		"title": "40.3756° N, 82.3971° W → 32.3792° N, 86.3077° W",
@@ -30,7 +32,8 @@
 		"href": "/work/forty-north-map/",
 		"thumbnailSrc": "https://www.cmessinides.com/static/79a73fde9bc1987299db41a98cc4ce52/3d63d/forty-north-map.jpg",
 		"category": "Print",
-		"date": "Fall 2018"
+		"date": "Fall 2018",
+		"role": "Graphic design, illustration, print production"
 	},
 	{
 		"title": "The Kenyon Review Reading Series",
@@ -38,6 +41,7 @@
 		"href": "/work/kenyon-review/",
 		"thumbnailSrc": "https://www.cmessinides.com/static/6cd351f3d6ef6b2b59e96d11b3cd8458/3beb5/kenyon-review.png",
 		"category": "Print",
-		"date": "Fall 2016 - Spring 2019"
+		"date": "Fall 2016 - Spring 2019",
+		"role": "Graphic design, email design"
 	}
 ]

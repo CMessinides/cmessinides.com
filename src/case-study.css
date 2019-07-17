@@ -22,6 +22,10 @@
 	flex: 1 1 50%;
 }
 
+.l-case-study__body {
+	margin-top: var(--spacing--lg--rem);
+}
+
 @supports (display: grid) {
 	@media (min-width: 52em) {
 		.l-case-study__header {

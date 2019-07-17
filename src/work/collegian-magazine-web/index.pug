@@ -1,7 +1,6 @@
 extends ../../base
 
+include ../../case-study
+
 block content
-	main
-		article
-			header
-				h1 The Collegian Magazine Website
+	+caseStudy(projects.findByHref('collegian-magazine-web'))

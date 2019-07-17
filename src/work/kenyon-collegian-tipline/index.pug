@@ -1,7 +1,6 @@
 extends ../../base
 
+include ../../case-study
+
 block content
-	main
-		article
-			header
-				h1 The Kenyon Collegian Tipline
+	+caseStudy(projects.findByHref('kenyon-collegian-tipline'))

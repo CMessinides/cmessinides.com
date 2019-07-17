@@ -1,0 +1,22 @@
+mixin caseStudyHeader(project = {})
+	header.l-case-study__header.o-container.o-container--narrow.o-container--flush
+		h1.c-project__title.l-case-study__title= project.title
+		p.c-project__description.l-case-study__description= project.description
+		img.c-project__thumbnail.l-case-study__thumbnail(alt="" src=project.thumbnailSrc)
+		dl.c-project__details.l-case-study__details
+			.c-project__detail-group.l-case-study__detail-item
+				dt.c-project__detail-label Category
+				dd.c-project__detail= project.category
+			.c-project__detail-group.l-case-study__detail-item
+				dt.c-project__detail-label Date
+				dd.c-project__detail= project.date
+			.c-project__detail-group.l-case-study__detail-item
+				dt.c-project__detail-label Role
+				dd.c-project__detail= project.role
+
+mixin caseStudy(project = {})
+	main
+		article.l-case-study.c-project.o-container
+			+caseStudyHeader(project)
+			.l-case-study__body.o-container.o-container--narrow.o-container--flush
+				block

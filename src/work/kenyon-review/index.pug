@@ -1,7 +1,6 @@
 extends ../../base
 
+include ../../case-study
+
 block content
-	main
-		article
-			header
-				h1 The Kenyon Review Reading Series
+	+caseStudy(projects.findByHref('kenyon-review'))
