@@ -13,7 +13,7 @@ for (let i = 0; i < dataFiles.length; i++) {
 locals.projects.findByHref = function(pattern) {
 	return this.find(project => {
 		const matches = project.href.match(pattern);
-		return Boolean(matches[0]);
+		return Boolean(matches && matches[0]);
 	});
 };
 
