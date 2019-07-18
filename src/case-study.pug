@@ -1,5 +1,5 @@
 mixin caseStudyHeader(project = {})
-	header.l-case-study__header.o-container.o-container--narrow.o-container--flush
+	header.l-case-study__container.o-container.o-container--narrow
 		h1.c-project__title.l-case-study__title= project.title
 		p.c-project__description.l-case-study__description= project.description
 		img.c-project__thumbnail.l-case-study__thumbnail(alt="" src=project.thumbnailSrc)
@@ -14,9 +14,15 @@ mixin caseStudyHeader(project = {})
 				dt.c-project__detail-label Role
 				dd.c-project__detail= project.role
 
+mixin caseStudySegment({ variants = [] } = {})
+	- const classes = variants.map(variant => `l-case-study__segment--${variant}`);
+	.l-case-study__segment(class=classes)&attributes(attributes)
+		.l-case-study__container.o-container.o-container--narrow
+			block
+
 mixin caseStudy(project = {})
 	main
-		article.l-case-study.c-project.o-container
+		article.l-case-study.c-project
 			+caseStudyHeader(project)
-			.l-case-study__body.o-container.o-container--narrow.o-container--flush.o-contains-headings.c-article
+			.l-case-study__body.o-contains-headings.c-article
 				block

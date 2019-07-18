@@ -53,3 +53,12 @@ img,
 iframe {
 	max-width: 100%;
 }
+
+code {
+	color: var(--color--grey-700);
+	font-family: var(--font--mono);
+	background-color: var(--color--grey-200);
+	border: 1px var(--color--grey-300) solid;
+	padding: 0 var(--spacing--xs--px);
+	border-radius: var(--radius--sm);
+}

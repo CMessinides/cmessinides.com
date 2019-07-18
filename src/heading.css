@@ -12,3 +12,10 @@
 .o-contains-headings h2 {
 	font-size: var(--font-size--xl);
 }
+
+.o-heading--3,
+.o-contains-headings h3 {
+	font-size: var(--font-size--sm);
+	text-transform: uppercase;
+	letter-spacing: var(--tracking--wide);
+}
