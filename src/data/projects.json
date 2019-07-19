@@ -7,7 +7,10 @@
 		"thumbnailSrc": "/work/kenyon-collegian-web/mockup.png",
 		"category": "Web",
 		"date": "Fall 2017",
-		"role": "UI/UX design, front-end development, dev-ops"
+		"role": "UI/UX design, front-end development, dev-ops",
+		"otherLinks": {
+			"live": "https://kenyoncollegian.com"
+		}
 	},
 	{
 		"title": "The Collegian Magazine Website",

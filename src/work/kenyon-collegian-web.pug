@@ -16,7 +16,8 @@ append styles
 		include ./kenyon-collegian-web.css
 
 block content
-	+caseStudy(projects.findByHref("kenyon-collegian-web"))
+	- const project = projects.findByHref("kenyon-collegian-web")
+	+caseStudy(project)
 		+caseStudySegment
 			h2#heading-summary 👉 Summary
 			p
@@ -25,6 +26,9 @@ block content
 				| and user experience. The result is a professional and polished product that
 				| better communicates the #[cite.title Collegian]'s commitment to accuracy,
 				| clarity, and excellence.
+		+caseStudySegment
+			h2#heading-links 🔗 Links
+			p #[+link()(href=project.otherLinks.live) See the website]
 		+caseStudySegment
 			h2#heading-problem 🔎 Understanding the problem
 			p
