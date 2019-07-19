@@ -1,13 +1,16 @@
 include ./summary
 
-mixin projectSummary({ title, description, href, thumbnailSrc, category, date, variants, level = 3 } = {})
+mixin projectSummary({ title, description, href, linkType, thumbnailSrc, category, date, variants, level = 3 } = {})
 	- let classes = ['c-summary--project']
 	if variants
 		- classes = classes.concat(variants.map(v => `c-summary--${v}`))
-	+summary(href)(class=classes)
+	+summary()(class=classes)
+		if thumbnailSrc
+			+summaryThumbnail(thumbnailSrc)
 		header.c-summary__header
-			+summaryHeading(level)= title
-			+summaryDescription= description
-		+summaryThumbnail(thumbnailSrc)
-		+summaryDetails
-			+summaryDetail('Category')= category
+			+summaryDetails
+				+summaryDetail('Type')= linkType
+				+summaryDetail('Category')= category
+			+summaryLink(href)
+				+summaryHeading(level)= title
+				+summaryDescription= description

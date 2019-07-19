@@ -96,7 +96,7 @@ block content
 			p
 				| To meet the project deadline, I designed just one template for articles, which works well 90% of the time. But when the #[cite.title Collegian]
 				| publishes photo essays or other pieces more complex than a typcial article, the template stifles the online presentation.
-				| (This is a problem I solved better with the #[+link()(href="./collegian-magazine-web.pug") Collegian Magazine website].)
+				| (This is a problem I solved better with the #[+link()(href=projects.findByHref("collegianmagazine").href) Collegian Magazine website].)
 				| If I had the time and resources, I would have created several different post types for photo galleries, magazine-like features,
 				| and others as needed.
 		+caseStudySegment
@@ -117,10 +117,9 @@ block content
 			p
 				| Were I to tackle this project again today, I would likely continue using vanilla JS &mdash; the required
 				| functionality on the #[cite.title Collegian] website is not complex enough to require a library or framework &mdash;
-				| but I would incorporate concepts that I&rsquo;ve learned from using React: component composition,
-				| and separating state changes from view updates. A lighter alternative to React, like Preact or Svelte,
-				| could also be an option.
+				| but I would incorporate what I&rsquo;ve learned from using React, namely separating state changes from view
+				| updates. A lighter alternative to React, like Preact or Svelte, could also be an option.
 			p
 				| And lastly, I would test! After using Jest in a few projects, I&rsquo;ve gotten far more comfortable
-				| with testing JavaScript and testing code in general. (See the #[+link()(href="./kenyon-collegian-tipline.pug") Kenyon Collegian tipline]
+				| with testing JavaScript and testing code in general. (See the #[+link()(href=projects.findByHref("tipline").href) Kenyon Collegian tipline]
 				| for an example one of those better-tested projects.)

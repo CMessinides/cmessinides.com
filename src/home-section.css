@@ -1,0 +1,23 @@
+.c-home-section {
+	padding: var(--spacing--lg--rem) 0;
+	background-color: var(--color--grey-100);
+	border-top: 1px var(--color--grey-200) solid;
+}
+
+.c-home-section__grid,
+.c-home-section__item + .c-home-section__item {
+	margin-top: var(--spacing--lg--rem);
+}
+
+@supports (display: grid) {
+	.c-home-section__grid {
+		display: grid;
+		grid-gap: var(--spacing--lg--px);
+		grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+		max-width: 100%;
+	}
+
+	.c-home-section__item + .c-home-section__item {
+		margin: 0;
+	}
+}

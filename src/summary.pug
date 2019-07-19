@@ -1,10 +1,15 @@
 include ./heading
+include ./link
 
 mixin summary(href)
 	article.c-summary&attributes(attributes)
-		a.c-summary__link(href=href)
-			if block
-				block
+		if block
+			block
+
+mixin summaryLink(href)
+	+link()(href=href).c-summary__link&attributes(attributes)
+		if block
+			block
 
 mixin summaryHeading(level=3)
 	+heading(level)(class="c-summary__heading")&attributes(attributes)

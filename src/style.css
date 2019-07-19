@@ -11,17 +11,14 @@
 /* Component classes */
 @import "./button.css";
 @import "./link.css";
-@import "./input.css";
-@import "./pill.css";
 @import "./project.css";
 @import "./header.css";
 @import "./footer.css";
 @import "./contact-prompt.css";
 @import "./summary.css";
 @import "./article.css";
-@import "./project-gallery.css";
 @import "./home-hero.css";
-@import "./home-projects.css";
+@import "./home-section.css";
 
 /* Layout classes */
 @import "./main.css";

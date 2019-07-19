@@ -13,16 +13,14 @@ block content
 							| I&rsquo;m a writer, designer, and web developer.
 							| I&rsquo;m passionate about journalism and interested in
 							| telling stories through words, visuals, data, and&nbsp;code.
-			section.c-home-projects
-				.o-container.o-container--flush.c-home-projects__container
-					.c-home-projects__sidebar
-						h2.c-home-projects__heading.o-heading--2 Projects
-						a.c-link.c-link--skip.u-sr-only.c-home-projects__skip-link(href="#home-projects-project-list") Skip to projects
-						form.c-home-projects__search-form(action="/#home-projects-project-list" role="search" aria-label="Search projects" aria-controls="home-projects-project-list")
-							label.u-sr-only(for="home-projects-filter-form-search-input") Project title
-							input.c-input.c-input--text.c-input--glass(id="home-projects-filter-form-search-input" name="s" placeholder="Search" role="search" type="text" disabled)
-							button.u-sr-only.c-button(type="submit" disabled) Search projects
-					ul#home-projects-project-list.c-home-projects__list
+			section.c-home-section.c-home-section--projects
+				.o-container.c-home-section__container
+					h2.o-heading.o-heading--3 Projects
+					ul.c-home-section__grid.o-container.o-container--narrow.o-container--flush
 						each project in projects
-							li.c-home-projects__item
+							li.c-home-section__item
 								+projectSummary(project)
+			section.c-home-section.c-home-section--writing
+				.o-container.c-home-section__container
+					h2.o-heading.o-heading--3 Writing
+					ul.c-home-section__grid.o-container.o-container--narrow.o-container--flush
