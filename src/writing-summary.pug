@@ -1,0 +1,14 @@
+include ./summary
+
+mixin writingSummary({ title, description, href, publication, date, variants, level = 3 } = {})
+	- let classes = ['c-summary--writing']
+	if variants
+		- classes = classes.concat(variants.map(v => `c-summary--${v}`))
+	+summary()(class=classes)
+		header.c-summary__header
+			+summaryDetails
+				+summaryDetail('Publication')= publication
+				+summaryDetail('Date')= date
+			+summaryLink(href)
+				+summaryHeading(level)= title
+				+summaryDescription= description

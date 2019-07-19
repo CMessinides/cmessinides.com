@@ -1,6 +1,7 @@
 extends ./base
 
 include ./project-summary
+include ./writing-summary
 
 block content
 	main.l-homepage
@@ -24,3 +25,6 @@ block content
 				.o-container.c-home-section__container
 					h2.o-heading.o-heading--3 Writing
 					ul.c-home-section__grid.o-container.o-container--narrow.o-container--flush
+						each sample in writing
+							li.c-home-section__item
+								+writingSummary(sample)

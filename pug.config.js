@@ -1,7 +1,7 @@
 const fs = require("fs");
 
 const locals = {};
-const dataFiles = ["site", "projects"];
+const dataFiles = ["site", "projects", "writing"];
 
 for (let i = 0; i < dataFiles.length; i++) {
 	const key = dataFiles[i];
