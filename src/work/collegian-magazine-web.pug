@@ -1,0 +1,30 @@
+extends ../base
+
+include ../html-head
+include ../case-study
+include ../aspect-ratio
+include ../link
+
+block pageTitle
+	+pageTitle(projects.findByHref("collegian-magazine-web").title)
+
+block pageDescription
+	+pageDescription(projects.findByHref("collegian-magazine-web").description)
+
+block content
+	- const project = projects.findByHref("collegian-magazine-web")
+	+caseStudy(project)
+		+caseStudySegment
+			h2#heading-summary 👉 Summary
+			p
+		+caseStudySegment
+			h2#heading-links 🔗 Links
+			p #[+link()(href=project.otherLinks.live) See the website]
+		+caseStudySegment
+			h2#heading-problem 🤔 The problem
+		+caseStudySegment
+			h2#heading-false-starts 🚫 False starts
+		+caseStudySegment
+			h2#heading-result 💡 The solution
+		+caseStudySegment
+			h2#heading-what-would-improve 📈 What could be improved

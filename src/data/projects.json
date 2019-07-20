@@ -15,12 +15,15 @@
 	{
 		"title": "The Collegian Magazine Website",
 		"description": "Flexible layouts and bold typography for Kenyon’s longform stories.",
-		"href": "https://www.thecollegianmagazine.com",
-		"linkType": "Live Site",
+		"href": "/work/collegian-magazine-web.pug",
+		"linkType": "Case Study",
 		"thumbnailSrc": "/work/collegian-magazine-web/mockup.png",
 		"category": "Web",
 		"date": "Summer 2017",
-		"role": "UI/UX design, CMS design, front-end development"
+		"role": "UI/UX design, CMS design, front-end development",
+		"otherLinks": {
+			"live": "https://www.thecollegianmagazine.com"
+		}
 	},
 	{
 		"title": "The Kenyon Collegian Tipline",
