@@ -46,6 +46,10 @@ yarn build
 
 This site is hosted on [Netlify](https://www.netlify.com) &mdash; pushing or merging changes into the `master` branch will trigger a deploy.
 
+## What&rsquo;s next
+
+Check out the [projects](https://github.com/CMessinides/cmessinides.com/projects) on Github to see what I&rsquo;m working on next!
+
 ## License
 
 MIT
