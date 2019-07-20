@@ -5,12 +5,11 @@ mixin projectSummary({ title, description, href, linkType, thumbnailSrc, categor
 	if variants
 		- classes = classes.concat(variants.map(v => `c-summary--${v}`))
 	+summary()(class=classes)
-		if thumbnailSrc
-			+summaryThumbnail(thumbnailSrc)
-		header.c-summary__header
-			+summaryDetails
-				+summaryDetail('Type')= linkType
-				+summaryDetail('Category')= category
 			+summaryLink(href)
+				if thumbnailSrc
+					+summaryThumbnail(thumbnailSrc)
+				+summaryDetails
+					+summaryDetail('Type')= linkType
+					+summaryDetail('Category')= category
 				+summaryHeading(level)= title
 				+summaryDescription= description

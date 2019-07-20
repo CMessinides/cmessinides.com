@@ -5,10 +5,9 @@ mixin writingSummary({ title, description, href, publication, date, variants, le
 	if variants
 		- classes = classes.concat(variants.map(v => `c-summary--${v}`))
 	+summary()(class=classes)
-		header.c-summary__header
+		+summaryLink(href)
 			+summaryDetails
 				+summaryDetail('Publication')= publication
 				+summaryDetail('Date')= date
-			+summaryLink(href)
-				+summaryHeading(level)= title
-				+summaryDescription= description
+			+summaryHeading(level)= title
+			+summaryDescription= description
