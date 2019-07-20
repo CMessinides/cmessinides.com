@@ -1,5 +1,5 @@
 .c-home-section {
-	padding: var(--spacing--lg--rem) 0;
+	padding: var(--spacing--lg--rem) 0 var(--spacing--xl--rem);
 	background-color: var(--color--grey-100);
 	border-top: 1px var(--color--grey-200) solid;
 }
