@@ -9,9 +9,9 @@
 		"release": "standard-version"
 	},
 	"husky": {
-    "hooks": {
-		  "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-    }
+		"hooks": {
+			"commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+		}
 	},
 	"devDependencies": {
 		"@commitlint/cli": "^8.1.0",
