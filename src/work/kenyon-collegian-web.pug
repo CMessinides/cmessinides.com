@@ -19,7 +19,7 @@ block content
 	- const project = projects.findByHref("kenyon-collegian-web")
 	+caseStudy(project)
 		+caseStudySegment
-			h2#heading-summary 👉 Summary
+			h2#heading-summary Summary
 			p
 				| To replace an outdated and buggy site for the #[cite.title Kenyon Collegian],
 				| I designed and built a new website with improved accessibility, performance,
@@ -27,10 +27,10 @@ block content
 				| better communicates the #[cite.title Collegian]'s commitment to accuracy,
 				| clarity, and excellence.
 		+caseStudySegment
-			h2#heading-links 🔗 Links
+			h2#heading-links Links
 			p #[+link()(href=project.otherLinks.live) See the website]
 		+caseStudySegment
-			h2#heading-problem 🔎 Understanding the problem
+			h2#heading-problem Understanding the problem
 			p
 				| In 2017, the #[cite.title Collegian] needed a new website. At the time,
 				| the existing website looked outdated, was hard to navigate, and had the potential
@@ -61,7 +61,7 @@ block content
 					iframe(style="border: none;" width="800" height="450" title="Kenyon Collegian website wireframes" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FQNpMaWZf4fsbIicF4mocvxlp%2FWireframes%3Fnode-id%3D0%253A1" allow="fullscreen" priority="low" referrerpolicy="noreferrer")
 				figcaption Initial wireframes for the homepage, category page, and search page
 		+caseStudySegment
-			h2#heading-result 💡 Implementing the redesign
+			h2#heading-result Implementing the redesign
 			p
 				| Because the #[cite.title Collegian] staff was already familiar with the WordPress interface
 				| used in the previous site, I stuck with WordPress at the core of the new site. But on top
@@ -94,7 +94,7 @@ block content
 			figure
 				img(src="./kenyon-collegian-web/pages.png", alt="A collage of several pages on the Collegian website. Screenshots.")
 		+caseStudySegment
-			h2#heading-what-would-improve 📈 What could be improved
+			h2#heading-what-would-improve What could be improved
 		+caseStudySegment
 			h3 Article layouts
 			p
@@ -115,15 +115,14 @@ block content
 				script(src="https://gist.github.com/CMessinides/9703e90117c53bdbd5f94f21dd268750.js")
 		+caseStudySegment
 			p
-				| Ignoring for now the outdated APIs (#[code XMLHttpRequest] 😩), this component is needlessly generic,
-				| relies on specific DOM attributes like #[code data-channel] and #[code data-target] without documenting
-				| how and why they should be used, and mixes logic with presentation details in a hard-to-read soup.
-			p
-				| Were I to tackle this project again today, I would likely continue using vanilla JS &mdash; the required
-				| functionality on the #[cite.title Collegian] website is not complex enough to require a library or framework &mdash;
-				| but I would incorporate what I&rsquo;ve learned from using React, namely separating state changes from view
-				| updates. A lighter alternative to React, like Preact or Svelte, could also be an option.
+				| This component is needlessly generic, relies on specific DOM attributes like #[code data-channel]
+				| and #[code data-target] without documenting how and why they should be used, and mixes logic
+				| with presentation details in a hard-to-read soup. Were I to tackle this project again today, I would
+				| likely continue using vanilla JS &mdash; the required functionality on the #[cite.title Collegian] website
+				| is not complex enough to require a library or framework &mdash; but I would incorporate what I&rsquo;ve learned
+				| from using React, namely separating state changes from view updates. A lighter alternative to React,
+				| like Preact or Svelte, could also be an option.
 			p
 				| And lastly, I would test! After using Jest in a few projects, I&rsquo;ve gotten far more comfortable
 				| with testing JavaScript and testing code in general. (See the #[+link()(href=projects.findByHref("tipline").href) Kenyon Collegian tipline]
-				| for an example one of those better-tested projects.)
+				| for an example of one of those better-tested projects.)
