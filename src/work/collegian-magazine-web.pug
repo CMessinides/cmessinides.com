@@ -11,6 +11,10 @@ block pageTitle
 block pageDescription
 	+pageDescription(projects.findByHref("collegian-magazine-web").description)
 
+append styles
+	style
+		include ./collegian-magazine-web.css
+
 block content
 	- const project = projects.findByHref("collegian-magazine-web")
 	+caseStudy(project)
@@ -22,8 +26,8 @@ block content
 				| #[+link()(href="https://prismic.io") Prismic], and a static site
 				| generator, #[+link()(href="https://middlemanapp.com") Middleman], to
 				| create a performant website that brought the #[cite.title Magazine&rsquo;s]
-				| brand to the web and gave editors the flexibility to post a vast
-				| array of content.
+				| brand to the web and allowed editors to upload a wide range of stories without
+				| compromising on flexible layouts.
 		+caseStudySegment
 			h2#heading-links Links
 			p #[+link()(href=project.otherLinks.live) See the website]
@@ -38,15 +42,106 @@ block content
 				| approached me that year to design and build a custom website for the #[cite.title Magazine]
 				| to reach its readers online.
 			p
-				| I knew my toughest challenge would be translating the #[cite.title Magazine]&rsquo;s
+				| A static site generator was a clear choice for building the site. The #[cite.title Magazine]
+				| publishes only twice annually, so for almost every day of the year, the site content
+				| does not change. Anything besides static HTML would be a waste of resources.
+			p
+				| But finding the right CMS posed a more difficult problem, because I knew my toughest
+				| challenge would be translating the #[cite.title Magazine]&rsquo;s
 				| stories from print to digital. The #[cite.title Magazine] produces beautiful print
 				| design with creative layouts, especially for its photo essays, that convey narratives
 				| through visuals alone. I didn’t want to lose those stories in translation, so
-				| so I prioritized flexibility and set out to find an interface that would allow editors
+				| I prioritized flexibility and set out to find an interface that would allow editors
 				| a high level of control over article layout.
 		+caseStudySegment
-			h2#heading-false-starts False starts
-		+caseStudySegment
 			h2#heading-result The solution
+			p
+				| Prismic allows editors to define their content as a set of #[+link()(href="https://prismic.io/feature/dynamic-layout-content-components") slices],
+				| which are structured, reusable sections. Slices can be mixed, matched, and rearranged,
+				| meaning that no two articles on the #[cite.title Magazine] site need share the same
+				| template.
+		+caseStudySegment({ variants: ['double-wide'] })
+			figure#figure-dynamic-layouts
+				img(src="./collegian-magazine-web/layouts.png", alt="A collage of several pages on the Collegian Magazine website. Screenshots.")
+		+caseStudySegment
+			p
+				| Alongside flexibility, I also prioritized responsive design.  I carefully styled
+				| the site to ensure every design decision, from navigation menus to gallery layouts, scaled down
+				| without a hitch.
+		+caseStudySegment({ variants: ['grey', 'wide-left'] })
+			figure
+				.o-screens
+					.o-screens__cell.o-screens__cell--desktop
+						img(src="./collegian-magazine-web/menu-desktop.png", alt="The site's navigation menu open on desktop. Screenshot.")
+					.o-screens__cell.o-screens__cell--mobile
+						img(src="./collegian-magazine-web/menu-mobile.png", alt="The site's navigation menu open on mobile. Screenshot.")
+		+caseStudySegment({ variants: ['grey', 'flush', 'wide-right'] })
+			figure
+				.o-screens
+					.o-screens__cell.o-screens__cell--mobile
+						img(src="./collegian-magazine-web/issue-mobile.png", alt="The spring 2017 issue page on mobile. Screenshot.")
+					.o-screens__cell.o-screens__cell--desktop
+						img(src="./collegian-magazine-web/issue-desktop.png", alt="The spring 2017 issue page on desktop. Screenshot.")
+		+caseStudySegment({ variants: ['grey', 'flush', 'wide-left'] })
+			figure
+				.o-screens
+					.o-screens__cell.o-screens__cell--desktop
+						img(src="./collegian-magazine-web/gallery-desktop.png", alt="A photo gallery on desktop. Screenshot.")
+					.o-screens__cell.o-screens__cell--mobile
+						img(src="./collegian-magazine-web/gallery-mobile.png", alt="A photo gallery on mobile. Screenshot.")
+		+caseStudySegment({ variants: ['grey', 'flush', 'wide-right'] })
+			figure
+				.o-screens
+					.o-screens__cell.o-screens__cell--mobile
+						img(src="./collegian-magazine-web/category-mobile.png", alt="A list of articles on mobile. Screenshot.")
+					.o-screens__cell.o-screens__cell--desktop
+						img(src="./collegian-magazine-web/category-desktop.png", alt="A list of articles on desktop. Screenshot.")
+		+caseStudySegment({ variants: ['grey', 'flush', 'wide-left'] })
+			figure
+				.o-screens
+					.o-screens__cell.o-screens__cell--desktop
+						img(src="./collegian-magazine-web/small-photo-desktop.png", alt="A small photo in an article on desktop. Screenshot.")
+					.o-screens__cell.o-screens__cell--mobile
+						img(src="./collegian-magazine-web/small-photo-mobile.png", alt="A small photo in an article on mobile. Screenshot.")
 		+caseStudySegment
 			h2#heading-what-would-improve What could be improved
+		+caseStudySegment
+			h3#heading-ruby-quality Ruby code quality
+			p
+				| This website was my first real web development project, and it shows
+				| in the quality of my Ruby code. I wrote a custom integration to bring
+				| Prismic data into Middleman, but it has no automated tests and regularly
+				| runs into bugs that crash site updates and lead to tedious debugging
+				| sessions.
+				|
+				| The Prismic integration also doesn&rsquo;t adequately prepare the data for the
+				| templates, which means that the more complex template files begin with a
+				| mess of hard-to-read code to massage the data into a workable format. For
+				| example, here&rsquo;s the template for displaying a list of articles:
+		+caseStudySegment
+			figure#figure-template-sample
+				script(src="https://gist.github.com/CMessinides/4c0222d759bdf83699d1b7b8b433d437.js")
+		+caseStudySegment
+			p
+				| Templates like this one give me consistent trouble. They aren&rsquo;t easily
+				| testable, and they mix complex logic into the view layer. If I were to 
+				| reattempt this project, I would move this preparation logic into a
+				| separate class and keep the templates a little saner. And I would test &mdash;
+				| a lot.
+			p
+				small
+					- const tipline = projects.findByHref('tipline')
+					| (Struggling to squash bugs in this project taught me the value of a good test suite, so I
+					| implemented testing with more discipline in #[+link()(href=tipline.href)= tipline.title].)
+		+caseStudySegment
+			h3#heading-no-search-pagination No site search or pagination
+			p
+				| In the interest of time, I cut some features that I had hoped to include
+				| in the launch, namely site search and pagination for article lists. I still
+				| think I was right to deprioritize those features at the time, considering how
+				| small the #[cite.title Magazine]&rsquo;s archives were and still are.
+				| But as the #[cite.title Magazine] staff continues to add more articles to the site,
+				| proper search and pagination will become more critical to good user experience.
+				| Scrolling through a list of fifteen articles is commonplace, but no one wants to sift
+				| through two hundred to find the one they&rsquo;re looking for.
+

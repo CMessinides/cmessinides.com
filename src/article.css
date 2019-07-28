@@ -18,6 +18,13 @@
 		margin-top: var(--spacing--sm--rem);
 	}
 
+	/* 
+		Keep gists from expanding larger than the body text.
+	*/
+	& figure .gist {
+		max-width: 36rem;
+	}
+
 	/* Create large breaks after figures as well. */
 	& figure img {
 		display: block;
