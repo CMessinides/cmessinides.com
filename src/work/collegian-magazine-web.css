@@ -1,0 +1,15 @@
+.o-screens {
+	display: flex;
+}
+
+.o-screens__cell + .o-screens__cell {
+	margin-left: var(--spacing--md--px);
+}
+
+.o-screens__cell--desktop {
+	flex: 1.3333;
+}
+
+.o-screens__cell--mobile {
+	flex: 0.5626;
+}
