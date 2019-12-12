@@ -1,5 +1,0 @@
-mixin pageTitle(title, separator = "—")
-	title= title ? `${title} ${separator} ${site.title}` : `${site.title} ${separator} ${site.shortDescription}`
-
-mixin pageDescription(description)
-	meta(name="description" content= description ? description : site.description)

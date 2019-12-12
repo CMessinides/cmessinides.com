@@ -1,7 +1,0 @@
-mixin link
-	- const isExternal = /^https?:\/\//.test(attributes.href)
-	a.c-link&attributes(Object.assign({}, attributes, isExternal && {
-		target: "_blank",
-		rel: "noopener noreferrer"
-	}))
-		block
