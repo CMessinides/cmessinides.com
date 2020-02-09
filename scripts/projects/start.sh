@@ -2,7 +2,7 @@
 
 set -e
 
-source scripts/.parallel.sh
+source "$(dirname $0)/../.parallel.sh"
 
 PROJECT_NAME=$1
 

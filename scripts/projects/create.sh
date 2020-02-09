@@ -2,7 +2,7 @@
 
 set -e
 
-source scripts/.colors.sh
+source "$(dirname $0)/../.colors.sh"
 
 PROJECT_NAME=$1
 PROJECT_ROOT=site/projects/$PROJECT_NAME
