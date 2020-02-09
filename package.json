@@ -9,9 +9,10 @@
 	"scripts": {
 		"build": "eleventy",
 		"build:all": "yarn workspaces run build && yarn build",
+		"build:project": "scripts/projects/build.sh",
+		"create:project": "scripts/projects/create.sh",
 		"start": "eleventy --serve",
-		"project:init": "scripts/projects/init.sh",
-		"project:start": "scripts/projects/start.sh"
+		"start:project": "scripts/projects/start.sh"
 	},
 	"devDependencies": {
 		"@11ty/eleventy": "^0.10.0"

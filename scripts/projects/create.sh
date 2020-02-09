@@ -15,4 +15,4 @@ find $PROJECT_ROOT -type f -exec sed -i "" "s|{{ PROJECT_NAME }}|$PROJECT_NAME|g
 echo Installing project dependencies
 yarn install
 
-echo -e "OK: New project $(green $PROJECT_NAME) initialized at $(blue $PROJECT_ROOT)"
+echo -e "OK: New project $(green $PROJECT_NAME) created at $(blue $PROJECT_ROOT)"
