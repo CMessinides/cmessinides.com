@@ -1,0 +1,4 @@
+projects/**/src
+rollup.config.js
+README.md
+package.json

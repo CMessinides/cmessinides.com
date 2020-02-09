@@ -1,11 +1,16 @@
 {
 	"name": "cmessinides.com",
 	"version": "2.0.0",
-	"main": "index.js",
+	"private": true,
+	"workspaces": ["site/projects/*"],
 	"license": "MIT",
-	"scripts": {},
+	"scripts": {
+		"build": "eleventy",
+		"start": "eleventy --serve",
+		"project:init": "scripts/projects/init.sh"
+	},
 	"devDependencies": {
-		"autoprefixer": "^9.7.3"
+		"@11ty/eleventy": "^0.10.0"
 	},
 	"dependencies": {}
 }
