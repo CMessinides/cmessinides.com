@@ -2,12 +2,16 @@
 	"name": "cmessinides.com",
 	"version": "2.0.0",
 	"private": true,
-	"workspaces": ["site/projects/*"],
+	"workspaces": [
+		"site/projects/*"
+	],
 	"license": "MIT",
 	"scripts": {
 		"build": "eleventy",
+		"build:all": "yarn workspaces run build && yarn build",
 		"start": "eleventy --serve",
-		"project:init": "scripts/projects/init.sh"
+		"project:init": "scripts/projects/init.sh",
+		"project:start": "scripts/projects/start.sh"
 	},
 	"devDependencies": {
 		"@11ty/eleventy": "^0.10.0"
