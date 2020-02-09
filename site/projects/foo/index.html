@@ -1,13 +1,14 @@
+---
+title: foo
+tags: project
+---
 {% extends "base.html" %}
-
-{% block title %}foo{% endblock %}
-
-{% block stylesheets %}
-	{{ super() }}
+{% block title %}{{ title }}{% endblock %}
+{% block stylesheets -%}
+	{{- super() }}
 	<link rel="stylesheet" href="assets/main.css">
 	<link rel='stylesheet' href='assets/build/bundle.css'>
-{% endblock %}
-
-{% block scripts %}
+{%- endblock %}
+{%- block scripts %}
 	<script defer src='assets/build/bundle.js'></script>
-{% endblock %}
+{%- endblock -%}

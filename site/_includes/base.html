@@ -4,16 +4,14 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>{% block title %}Cameron Messinides{% endblock %}</title>
-
-		{%- block stylesheets %}
+		<!-- Stylesheets -->
+		{% block stylesheets -%}
 			<link rel="stylesheet" href="/assets/global.css">
-		{% endblock -%}
-
-		{%- block scripts %}
-		{% endblock -%}
-
-		{%- block headmeta %}
-		{% endblock -%}
+		{%- endblock %}
+		<!-- Scripts -->
+		{%- block scripts %}{% endblock %}
+		<!-- Metadata -->
+		{%- block headmeta %}{% endblock %}
 	</head>
 	<body>
 		{%- block content %}{% endblock -%}
