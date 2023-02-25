@@ -1,0 +1,40 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Cameron Messinides">
+	<div class="flow container">
+		<main class="flow">
+			<h1>Cameron Messinides</h1>
+			<p>
+				I'm a writer, designer, and programmer based in Philadelphia, where I enjoy playing pickup basketball, DMing D&amp;D adventures, and hacking on programming languages.
+			</p>
+			<p class="notice">
+				Support the <a href="https://www.tugsa.org/strike">Temple University Graduate Students&apos; Association strike</a>.
+			</p>
+		</main>
+	</div>
+</Layout>
+
+<style>
+	.container {
+		margin: auto;
+		padding: var(--space-s-l) var(--space-s);
+		max-width: var(--line-length-readable);
+	}
+
+	p:first-of-type {
+		font-size: var(--step-1);
+	}
+
+	.notice {
+		padding: var(--space-xs);
+		background-color: #FEF9C3;
+		color: #854D0E;
+		border: 1px #EAB308 solid;
+	}
+
+	.notice a {
+		color: inherit;
+	}
+</style>
