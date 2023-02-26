@@ -10,7 +10,8 @@
 		"astro": "astro"
 	},
 	"dependencies": {
-		"@fontsource/alegreya": "^4.5.11",
+		"@fontsource/eb-garamond": "^4.5.11",
+		"@fontsource/inconsolata": "^4.5.10",
 		"astro": "^2.0.15",
 		"modern-css-reset": "^1.4.0"
 	}

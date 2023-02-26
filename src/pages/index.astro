@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import TUGSABanner from '../components/timely/TUGSABanner.astro';
 ---
 
 <Layout title="Cameron Messinides">
@@ -7,11 +8,9 @@ import Layout from '../layouts/Layout.astro';
 		<main class="flow">
 			<h1>Cameron Messinides</h1>
 			<p>
-				I'm a writer, designer, and programmer based in Philadelphia, where I enjoy playing pickup basketball, DMing D&amp;D adventures, and hacking on programming languages.
+				I&apos;m a writer, designer, and programmer based in Philadelphia, where I enjoy playing pickup basketball, DMing D&amp;D adventures, and hacking on programming languages.
 			</p>
-			<p class="notice">
-				Support the <a href="https://www.tugsa.org/strike">Temple University Graduate Students&apos; Association strike</a>.
-			</p>
+			<TUGSABanner />
 		</main>
 	</div>
 </Layout>
@@ -21,20 +20,5 @@ import Layout from '../layouts/Layout.astro';
 		margin: auto;
 		padding: var(--space-s-l) var(--space-s);
 		max-width: var(--line-length-readable);
-	}
-
-	p:first-of-type {
-		font-size: var(--step-1);
-	}
-
-	.notice {
-		padding: var(--space-xs);
-		background-color: #FEF9C3;
-		color: #854D0E;
-		border: 1px #EAB308 solid;
-	}
-
-	.notice a {
-		color: inherit;
 	}
 </style>
