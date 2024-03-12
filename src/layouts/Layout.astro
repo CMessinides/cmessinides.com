@@ -1,11 +1,10 @@
 ---
-import 'modern-css-reset'
-import '@fontsource/eb-garamond/variable.css'
-import '@fontsource/eb-garamond/variable-italic.css'
-import '@fontsource/inconsolata/variable.css'
-
-import '../styles/base.css'
-import '../styles/composition/flow.css'
+import "modern-css-reset";
+import site from "../data/site.json";
+import "../styles/base.css";
+import "../styles/layout/grid.css";
+import "../styles/composition/flow.css";
+import "../styles/blocks/footnotes.css";
 
 export interface Props {
 	title: string;
@@ -14,16 +13,65 @@ export interface Props {
 const { title } = Astro.props;
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
+		<title>{title} | {site.name}</title>
 	</head>
 	<body>
-		<slot />
+		<div class="page">
+			<header class="grid">
+				<nav class="container">
+					<a class="site-name" href="/">{site.name}</a>
+				</nav>
+			</header>
+			<main class="grid">
+				<slot />
+			</main>
+			<footer class="grid">
+				<small class="container">
+					<span>Copyright &copy; 2024 Cameron Messinides</span>
+					<a href="/colophon">Colophon</a>
+				</small>
+			</footer>
+		</div>
 	</body>
 </html>
+
+<style>
+	body {
+		background-color: #eee;
+	}
+
+	.page {
+		background-color: #fff;
+		max-width: var(--site-max-width);
+		margin-inline: auto;
+		width: 100%;
+	}
+
+	header,
+	footer {
+		padding-block: var(--space-xs);
+	}
+
+	.site-name {
+		color: inherit;
+		font-weight: bold;
+	}
+
+	footer {
+		border-top: 4px #eee solid;
+		margin-block-start: var(--space-3xl);
+	}
+
+	footer > .container {
+		color: #445;
+		display: flex;
+		gap: var(--space-xs);
+	}
+</style>

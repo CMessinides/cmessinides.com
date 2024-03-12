@@ -1,0 +1,16 @@
+---
+import { getEntry } from "astro:content";
+import Layout from "../../layouts/Layout.astro";
+
+const sadie = await getEntry("wiki", "sadie");
+const { Content } = await sadie.render();
+---
+
+<Layout title="Sadie">
+	<div class="grid">
+		<div class="container flow">
+			<h1>{sadie.data.title}</h1>
+			<Content />
+		</div>
+	</div>
+</Layout>
