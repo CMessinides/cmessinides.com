@@ -1,55 +1,24 @@
 ---
-export interface Props {
-	src: string;
-	alt: string;
-	focalX?: string;
-	focalY?: string;
+import Halftone, { type Props as HalftoneProps } from "./Halftone.astro";
+export interface Props
+	extends Pick<HalftoneProps, "photoContrast" | "photoBrightness"> {
+	class?: string;
 }
 
-const { src, alt, focalX = "50%", focalY = "50%" } = Astro.props;
+const { class: className, ...rest } = Astro.props;
 ---
 
-<div class="hero">
-	<div class="dots"></div>
-	<img alt={alt} src={src} />
-</div>
+<Halftone class:list={["hero", className]} {...rest}>
+	<slot />
+</Halftone>
 
-<style define:vars={{ "photo-focal-x": focalX, "photo-focal-y": focalY }}>
+<style>
 	.hero {
-		--dot-size: 2px;
-		--line-color: hsl(0, 0%, 11%);
-		--line-contrast: 2000%;
-		--photo-brightness: 100%;
-		--photo-contrast: 60%;
-
 		aspect-ratio: 3/1;
-		filter: contrast(2000%);
-		position: relative;
-		overflow: hidden;
 	}
 
-	:where(.hero > *) {
-		position: absolute;
-		inset: 0;
-	}
-
-	.dots {
-		transform: rotate(20deg);
-		background: radial-gradient(
-			circle at center,
-			var(--line-color),
-			hsl(0, 0%, 100%)
-		);
-		background-size: var(--dot-size) var(--dot-size);
-		inset: -50%;
-	}
-
-	img {
-		filter: grayscale(1) brightness(var(--photo-brightness))
-			contrast(var(--photo-contrast));
-		mix-blend-mode: hard-light;
+	.hero > :global(img) {
 		object-fit: cover;
-		object-position: var(--photo-focal-x) var(--photo-focal-y);
 		height: 100%;
 		width: 100%;
 	}

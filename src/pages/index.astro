@@ -1,16 +1,21 @@
 ---
+import { Image } from "astro:assets";
 import Layout from "../layouts/Layout.astro";
 import Hero from "../components/Hero.astro";
+import skyline from "../assets/philly-skyline.jpg";
 import site from "../data/site.json";
 ---
 
 <Layout title="Home">
 	<div class="grid">
-		<Hero
-			src="/philly-skyline.jpg"
-			alt="The Philly skyline, featuring the Museum of Art, halftone effect."
-			focalY="30%"
-		/>
+		<Hero>
+			<Image
+				src={skyline}
+				alt="The Philly skyline, featuring the Museum of Art, halftone effect."
+				widths={[400, 800]}
+				sizes={`(max-width: 400px) 400px, 800px`}
+			/>
+		</Hero>
 		<div class="container">
 			<div class="intro flow">
 				<h1>{site.name}</h1>
