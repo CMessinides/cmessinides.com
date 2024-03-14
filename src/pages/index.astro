@@ -1,24 +1,68 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import TUGSABanner from '../components/timely/TUGSABanner.astro';
+import { Image } from "astro:assets";
+import Layout from "../layouts/Layout.astro";
+import Hero from "../components/Hero.astro";
+import skyline from "../assets/philly-skyline.jpg";
+import site from "../data/site.json";
 ---
 
-<Layout title="Cameron Messinides">
-	<div class="flow container">
-		<main class="flow">
-			<h1>Cameron Messinides</h1>
-			<p>
-				I&apos;m a writer, designer, and programmer based in Philadelphia, where I enjoy playing pickup basketball, DMing D&amp;D adventures, and hacking on programming languages.
-			</p>
-			<TUGSABanner />
-		</main>
+<Layout title="Home">
+	<div class="grid">
+		<Hero>
+			<Image
+				src={skyline}
+				alt="The Philly skyline, featuring the Museum of Art, halftone effect."
+				widths={[400, 800]}
+				sizes={`(max-width: 400px) 400px, 800px`}
+			/>
+		</Hero>
+		<div class="container">
+			<div class="intro flow">
+				<h1>{site.name}</h1>
+				<p>
+					I&rsquo;m a writer, designer, and programmer living in
+					Philly.
+				</p>
+			</div>
+			<div class="body flow">
+				<section class="currently flow">
+					<h2>Currently</h2>
+					<ul>
+						<li>
+							Working as a UI Engineer at <a
+								href="https://www.thinkcompany.com"
+								>Think Company</a
+							>
+						</li>
+						<li>
+							Training to walk the <a
+								href="https://en.wikipedia.org/wiki/Camino_de_Santiago"
+								>Camino de Santiago</a
+							>
+						</li>
+						<li>
+							Hacking on <a href="/wiki/sadie"
+								>programming languages</a
+							>
+						</li>
+					</ul>
+				</section>
+			</div>
+		</div>
 	</div>
 </Layout>
 
 <style>
-	.container {
-		margin: auto;
-		padding: var(--space-s-l) var(--space-s);
-		max-width: var(--line-length-readable);
+	.intro {
+		--flow-space: var(--space-s);
+	}
+
+	.body {
+		--flow-space: var(--space-l);
+		margin-top: var(--space-l-xl);
+	}
+
+	.body > * {
+		--flow-space: var(--space-m);
 	}
 </style>

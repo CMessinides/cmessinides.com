@@ -12,7 +12,12 @@
 	"dependencies": {
 		"@fontsource/eb-garamond": "^4.5.11",
 		"@fontsource/inconsolata": "^4.5.10",
-		"astro": "^2.0.15",
+		"astro": "^4.5.1",
 		"modern-css-reset": "^1.4.0"
+	},
+	"devDependencies": {
+		"prettier": "^3.2.5",
+		"prettier-plugin-astro": "^0.13.0",
+		"sharp": "^0.33.2"
 	}
 }

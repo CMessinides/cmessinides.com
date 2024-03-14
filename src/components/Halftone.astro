@@ -1,0 +1,59 @@
+---
+export interface Props {
+	dotSize?: string;
+	lineColor?: string;
+	lineContrast?: string;
+	photoBrightness?: string;
+	photoContrast?: string;
+	class?: string;
+}
+
+const {
+	dotSize = "2px",
+	lineColor = "hsl(0, 0%, 11%)",
+	lineContrast = "2000%",
+	photoBrightness = "100%",
+	photoContrast = "60%",
+	class: className,
+	...rest
+} = Astro.props;
+---
+
+<div class:list={["halftone", className]} {...rest}>
+	<div class="dots"></div>
+	<slot />
+</div>
+
+<style
+	define:vars={{
+		"dot-size": dotSize,
+		"line-color": lineColor,
+		"line-contrast": lineContrast,
+		"photo-brightness": photoBrightness,
+		"photo-contrast": photoContrast,
+	}}
+>
+	.halftone {
+		filter: contrast(var(--line-contrast));
+		position: relative;
+		overflow: hidden;
+	}
+
+	.dots {
+		transform: rotate(20deg);
+		background: radial-gradient(
+			circle at center,
+			var(--line-color),
+			hsl(0, 0%, 100%)
+		);
+		background-size: var(--dot-size) var(--dot-size);
+		position: absolute;
+		inset: -50%;
+	}
+
+	.halftone > :global(img) {
+		filter: grayscale(1) brightness(var(--photo-brightness))
+			contrast(var(--photo-contrast));
+		mix-blend-mode: hard-light;
+	}
+</style>

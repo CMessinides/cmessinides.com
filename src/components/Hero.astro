@@ -1,0 +1,25 @@
+---
+import Halftone, { type Props as HalftoneProps } from "./Halftone.astro";
+export interface Props
+	extends Pick<HalftoneProps, "photoContrast" | "photoBrightness"> {
+	class?: string;
+}
+
+const { class: className, ...rest } = Astro.props;
+---
+
+<Halftone class:list={["hero", className]} {...rest}>
+	<slot />
+</Halftone>
+
+<style>
+	.hero {
+		aspect-ratio: 3/1;
+	}
+
+	.hero > :global(img) {
+		object-fit: cover;
+		height: 100%;
+		width: 100%;
+	}
+</style>

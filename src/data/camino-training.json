@@ -1,0 +1,12 @@
+{
+    "goals": {
+        "mileage": 20
+    },
+    "walks": [
+        {
+            "date": "2024-03-10",
+            "miles": 8.47,
+            "packWeight": "light"
+        }
+    ]
+}
